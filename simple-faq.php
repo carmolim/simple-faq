@@ -3,7 +3,7 @@
 * Plugin Name: Massimo Simple FAQ
 * Plugin URI: http://augustocarmo.com.br/plugins
 * Description: A brief description about your plugin.
-* Version: 1.0 or whatever version of the plugin (pretty self explanatory)
+* Version: 1.0
 * Author: Augusto Carmo
 * Author URI: http://augustocarmo.com.br/
 * License: A "Slug" license name e.g. GPL12
