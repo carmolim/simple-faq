@@ -39,7 +39,7 @@
 			'label'                 => __( 'Question', 'text_domain' ),
 			'description'           => __( 'Post Type Description', 'text_domain' ),
 			'labels'                => $labels,
-			'supports'              => array( 'title', 'editor', 'revisions', 'custom-fields', ),
+			'supports'              => array( 'title', 'editor', 'revisions', 'custom-fields', 'revisions' ),
 			'hierarchical'          => false,
 			'public'                => true,
 			'show_ui'               => true,
