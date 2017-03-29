@@ -1,8 +1,13 @@
 jQuery(document).ready(function(){
-	var jQuery141 = $.noConflict(true);
+
+/**
+* TODO:
+	- add text when no questions is been shown
+	- clic on openned accodion close it
+*/
 
 	/*Make search*/
-  jQuery('#quicksearch').keyup(function () {
+  jQuery('.sfaq-filters__input').keyup(function () {
       var expression = false;
       var value = jQuery(this).val();
       var finder = "";
@@ -32,11 +37,14 @@ jQuery(document).ready(function(){
       });
   });
 
-  jQuery('#filters').on('click', 'button', function() {
+  jQuery('#filters').on('click', '.sfaq-filters__button', function() {
+
 
 		buttonFilter = jQuery(this).data('filter');
 
-		// console.log('categorias selecionada: ' + buttonFilter);
+		jQuery('.sfaq-filters__button').removeClass('sfaq-filters__button--active');
+		jQuery(this).addClass('sfaq-filters__button--active');
+
 
 		// if button all is clicked... show all questions
 		if (jQuery(this).data('filter') === 'all') {
@@ -85,13 +93,11 @@ jQuery(document).ready(function(){
 					}
 				}
 				else{
-					jQuery(this).slideDown(); // sho
-
+					jQuery(this).slideDown(); // show
 				}
 			});
 		}
 	});
-
 
 	/**
 	*
@@ -114,8 +120,6 @@ jQuery(document).ready(function(){
 
 			jQuery('.b-question__content').stop().animate({ height: 0 }, animTime);
 			jQuery('.b-question__content').eq(currIndex).stop().animate({ height: targetHeight }, animTime);
-
-			// jQuery('.b-questions').isotope('layout');
 
 			setTimeout(function(){ clickPolice = false; }, animTime);
 		}
